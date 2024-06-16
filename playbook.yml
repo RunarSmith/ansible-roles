@@ -1,0 +1,43 @@
+---
+
+# collect fascts only one time, to increase performances
+- name: Gather facts
+  hosts:  all
+  gather_facts: yes
+
+- name: "Customizing Parrot"
+  hosts: all
+  gather_facts: no
+  roles:
+    - configure-system
+    - install-tools
+    - configure-logging
+    - customize-tmux
+    - customize-desktop-mate
+    - customize-terminal
+    - customize-browser
+    - role: gantsign.visual-studio-code
+      users:
+        - username: "{{ ansible_user_id }}" 
+          visual_studio_code_extensions:
+            - DEVSENSE.phptools-vscode
+            - esbenp.prettier-vscode
+            - GitHub.copilot
+            - jebbs.markdown-extended
+            - mhutchie.git-graph
+            - ms-python.python
+            - silofy.hackthebox
+            - snyk-security.snyk-vulnerability-scanner
+            - streetsidesoftware.code-spell-checker
+            - yzhang.markdown-all-in-one
+          visual_studio_code_settings_overwrite: true
+          visual_studio_code_settings: {
+            "editor.wordWrap": "on",
+            "MarkdownPaste.path": "./images/",
+            "python.formatting.provider": "black" ,
+            "telemetry.enableTelemetry": false,
+            "telemetry.telemetryLevel": "error",
+            "telemetry.enableCrashReporter": false,
+            "window.titleBarStyle": "custom",
+            "workbench.colorTheme": "Hack The Box"
+          }

@@ -1,0 +1,8 @@
+---
+# defaults file for customize-terminal
+
+git_user:
+  name: "John Doe"
+  email: "john.doe@nobody.void"
+
+gitconfig_custom: ""

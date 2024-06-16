@@ -1,0 +1,13 @@
+---
+
+
+- name: "apt removals > remove unwanted packages"
+  become: true
+  apt:
+    name: 
+      - codium
+      - vscodium
+      - geany
+      - libreoffice
+    state: "absent"
+
