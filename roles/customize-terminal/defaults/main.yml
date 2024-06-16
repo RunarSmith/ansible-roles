@@ -6,3 +6,6 @@ git_user:
   email: "john.doe@nobody.void"
 
 gitconfig_custom: ""
+
+sshconfig_custom: ""
+
