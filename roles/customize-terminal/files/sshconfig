@@ -11,7 +11,6 @@
 Host 10.10.* *.htb *.thm
     StrictHostKeyChecking   no
     UserKnownHostsFile      /dev/null
-    HostKeyAlgorithms       ssh-rsa
+    #HostKeyAlgorithms       ssh-rsa
 
-{{ sshconfig_custom }}
 

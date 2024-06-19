@@ -7,8 +7,8 @@
     mode: '0744'
 
 - name: "ssh > ssh config file"
-  ansible.builtin.template:
-    src: templates/sshconfig.j2
+  ansible.builtin.file:
+    src: "{{ role_path }}/files/sshconfig"
     dest: "{{ ansible_env.HOME }}/.ssh/config"
     mode: '0744'
 
