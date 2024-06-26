@@ -8,6 +8,9 @@
       - ntpdate
       - flameshot
       - exiftool
+      - btop                # system monitor : https://github.com/aristocratos/btop
+      - netcat-traditional
+      - mingw-w64
     state: latest
   become: true
 

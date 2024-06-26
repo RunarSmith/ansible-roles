@@ -3,3 +3,8 @@
 - ansible.builtin.include_tasks: "bash.yml"
 - ansible.builtin.include_tasks: "ssh.yml"
 - ansible.builtin.include_tasks: "vpn.yml"
+
+- name: "Remove easter egg file"
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/Documents/candies from strangers"
+    state: absent
