@@ -28,32 +28,3 @@ xterm*|rxvt*|tmux*)
 *)
     ;;
 esac
-
-
-# -=-=-=- Get/Add/Remove host definission -=-=-=-
-function sys_add_hosts()
-{
-	Ip="$1"
-	Hosts="$2"
-	cp /etc/hosts /tmp/hosts
-	echo "${1}   ${2}" >> /tmp/hosts
-	# show diff
-	diff -d /etc/hosts /tmp/hosts
-	# set it
-	sudo mv /tmp/hosts /etc/hosts
-}
-
-function sys_get_hosts()
-{
-	grep "$1" /etc/hosts
-}
-
-function sys_rm_hosts()
-{
-	Term="$1"
-	grep -v "$Term" /etc/hosts > /tmp/hosts
-	# show diff
-	diff -d /etc/hosts /tmp/hosts
-	# set it
-	sudo mv /tmp/hosts /etc/hosts
-}

@@ -14,6 +14,6 @@
     marker: "### {mark} ANSIBLE MANAGED BLOCK"
     insertafter: EOF
     block: |
-      if [ -f ~/.bash_aliases ]; then
+      if [ -f ~/.bash_custom ]; then
         . ~/.bash_custom
       fi

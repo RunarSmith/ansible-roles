@@ -4,11 +4,11 @@
   ansible.builtin.file:
     path: "{{ ansible_env.HOME }}/.ssh"
     state: directory
-    mode: '0744'
+    mode: '0740'
 
 - name: "ssh > ssh config file"
-  ansible.builtin.file:
+  ansible.builtin.copy:
     src: "{{ role_path }}/files/sshconfig"
     dest: "{{ ansible_env.HOME }}/.ssh/config"
-    mode: '0744'
+    mode: '0440'
 

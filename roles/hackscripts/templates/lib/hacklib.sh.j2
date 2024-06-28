@@ -1,0 +1,38 @@
+
+
+function str_strip() {
+  String=$1
+  echo $String | sed "s/^[ \t]*//" | sed "s/[ \t]*$//"
+}
+
+# read a file ($1), remove comments, and strip lines
+function clean_file() {
+  cat $1 | sed "s/^[ \t]*#.*$//g" | sed "s/^[ \t]*//g" | sed "s/[ \t]*$//g" |  grep -v '^[ \t]*$'
+}
+
+# print title
+function print_title() {
+   echo "-=-=-=- Scan host ${1} -=-=-=-"
+   echo ""
+}
+
+function get_cmd() {
+  grep -E "^${1}:" ./commands.conf | sed  "s/^$1://"
+}
+
+# replace "{VariableName}" by its value
+function replace_variable() {
+  String=$1
+  VariableName=$2
+  VariableValue=$3
+
+  echo $String | sed "s/{$VariableName}/$VariableValue/"
+}
+
+function exec_cmd() {
+    cmd=$1
+    # display and execute command
+    echo $cmd
+    echo ""
+    $cmd
+}
