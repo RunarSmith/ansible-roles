@@ -2,7 +2,7 @@
 
 Term="$1"
 
-if [[ "x$Term" -eq "x" ]]; then
+if [ "x$Term" == "x" ]; then
     echo "Please provide a host to remove !!!"
     exit -1
 fi
