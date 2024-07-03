@@ -8,5 +8,3 @@ echo "actual credentials: neo4j / parrot"
 
 sudo neo4j start
 bloodhound
-
-

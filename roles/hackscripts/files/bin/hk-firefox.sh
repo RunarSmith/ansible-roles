@@ -5,4 +5,7 @@
 
 # When using firefox over a SSH connection with X11Forward, firefox hangs :(
 
-firefox --no-remote $*
+killall firefox
+killall firefox-esr
+
+firefox --new-instance --no-remote --disable-pinch $*
