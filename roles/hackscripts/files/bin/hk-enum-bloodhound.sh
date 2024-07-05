@@ -7,4 +7,8 @@ echo ""
 echo "actual credentials: neo4j / parrot"
 
 sudo neo4j start
+
+# give it 5 seconds to start
+sleep 5
+
 bloodhound
