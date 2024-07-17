@@ -1,7 +1,8 @@
 ---
 - ansible.builtin.include_tasks: apt-misc-stuff.yml
-- ansible.builtin.include_tasks: kerbrute.yml
-- ansible.builtin.include_tasks: github-repos.yml
-- ansible.builtin.include_tasks: python-tools.yml
-- ansible.builtin.include_tasks: gem-tools.yml
+- ansible.builtin.include_tasks: arsenal.yml
 - ansible.builtin.include_tasks: dictionaries.yml
+- ansible.builtin.include_tasks: gem-tools.yml
+- ansible.builtin.include_tasks: github-repos.yml
+- ansible.builtin.include_tasks: kerbrute.yml
+- ansible.builtin.include_tasks: python-tools.yml

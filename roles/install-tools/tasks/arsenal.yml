@@ -1,0 +1,7 @@
+---
+
+- name: checkout arsenal repository
+  ansible.builtin.git:
+    repo: https://github.com/Orange-Cyberdefense/arsenal.git
+    dest: /opt/arsenal
+  become: true

@@ -9,6 +9,7 @@
   hosts: all
   gather_facts: no
   roles:
+    - bootstrap
     - configure-system
     - install-tools
     - configure-logging
@@ -41,7 +42,7 @@
             "MarkdownPaste.path": "./images/",
             # python 
             "python.formatting.provider": "black" ,
-           # MS Telemetry 
+            # MS Telemetry 
             "telemetry.enableTelemetry": false,
             "telemetry.telemetryLevel": "error",
             "telemetry.enableCrashReporter": false,
