@@ -57,3 +57,10 @@
   become: true
 
 
+# Exploit-DB
+- name: "Installing evil-winrm"
+  package:
+    name:
+      - evil-winrm
+    state: latest
+  become: true

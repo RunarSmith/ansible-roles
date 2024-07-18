@@ -17,7 +17,7 @@
     - nori
     - rubyntlm
     - winrm-fs
-    - evil-winrm
+    #- evil-winrm
   become: true
 
 
