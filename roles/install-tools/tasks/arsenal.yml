@@ -1,7 +1,24 @@
 ---
 
-- name: checkout arsenal repository
+- name: "arsenal > Installing dependencies"
+  package:
+    name:
+      - python3-libtmux
+      - python3-docutils
+      - python3-pyperclip
+      - python3-yaml
+      - fzf
+    state: latest
+  become: true
+
+- name: "arsenal > checkout arsenal repository"
   ansible.builtin.git:
     repo: https://github.com/Orange-Cyberdefense/arsenal.git
     dest: /opt/arsenal
   become: true
+
+- name: "arsenal > create user my_cheats directory"
+  ansible.builtin.file:
+    path: "{{ ansible_env.HOME }}/.cheats"
+    state: directory
+    mode: '0740'

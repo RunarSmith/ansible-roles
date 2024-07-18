@@ -11,6 +11,7 @@
       - btop                # system monitor : https://github.com/aristocratos/btop
       - netcat-traditional
       - mingw-w64
+      - ranger # console file-manager
     state: latest
   become: true
 

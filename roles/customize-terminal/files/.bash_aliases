@@ -5,3 +5,4 @@ alias ipa='ip --brief --color address show'
 # seasons
 #alias vpn_htbs='sudo openvpn --config /home/user/.vpn/htb_competitive_*.ovpn --log-append /var/log/openvpn/vpn.log &'
 
+alias a='/opt/arsenal/run'
