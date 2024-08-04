@@ -1,4 +1,6 @@
 ---
+- ansible.builtin.include_tasks: apt-misc-stuff
+
 - ansible.builtin.include_tasks: apt-misc-stuff.yml
 - ansible.builtin.include_tasks: arsenal.yml
 - ansible.builtin.include_tasks: dictionaries.yml

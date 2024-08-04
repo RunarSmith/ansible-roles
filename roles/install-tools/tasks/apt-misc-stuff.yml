@@ -12,6 +12,7 @@
       - netcat-traditional
       - mingw-w64
       - ranger # console file-manager
+      - rdate
     state: latest
   become: true
 
