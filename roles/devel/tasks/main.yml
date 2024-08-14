@@ -1,0 +1,12 @@
+---
+# tasks file for devel
+
+
+  
+- name: "Installing Packages"
+  package:
+    name:
+      - mingw-w64
+    state: latest
+  become: true
+

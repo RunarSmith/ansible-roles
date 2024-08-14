@@ -10,13 +10,22 @@
   gather_facts: no
   roles:
     - bootstrap
+    - toolbox
     - configure-system
-    - install-tools
-    - configure-logging
-    - customize-tmux
-    - customize-desktop-mate
-    - customize-terminal
-    - customize-browser
+    - configure-user
+
+    - blueteam-forensic
+    - devel
+    - devops
+    - docs
+    - redteam-ad
+    - redteam-customscripts
+    - redteam-exploit
+    - redteam-host-enum
+    - redteam-net
+    - redteam-recon
+    - redteam-web
+
     - role: gantsign.visual-studio-code
       users:
         - username: "{{ ansible_user_id }}" 
@@ -25,6 +34,8 @@
             - silofy.hackthebox
             # beautify code 
             - esbenp.prettier-vscode
+            # Todo
+            - Gruntfuggly.todo-tree
             # langages
             - ms-vscode.cpptools
             - ms-python.debugpy
@@ -53,5 +64,3 @@
             # Workaround required to open VSCode over X11 with X11 Forward
             "window.titleBarStyle": "native"
           }
-    - hackscripts
-

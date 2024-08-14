@@ -1,0 +1,9 @@
+---
+
+- name: "Installing recon tools"
+  package:
+    name:
+      - ffuf
+      - nuclei
+    state: latest
+  become: true

@@ -1,0 +1,6 @@
+---
+# tasks file for redteam_web
+
+- ansible.builtin.include_tasks: "burp.yml"
+- ansible.builtin.include_tasks: "firefox.yml"
+- ansible.builtin.include_tasks: misc-apt.yaml
