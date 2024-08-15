@@ -2,7 +2,12 @@
 
 - ansible.builtin.include_tasks: "apt.yml"
 
-- ansible.builtin.include_tasks: "sudoers.yml"
+- ansible.builtin.include_tasks: "apt-removals.yml"
+
+- ansible.builtin.include_tasks: apt-misc-stuff.yml
+
+- ansible.builtin.include_tasks: "auditd.yml"
+  when: "'hosts_WSL' not in group_names"
 
 - ansible.builtin.include_tasks: "locale.yml"
   when: "'hosts_WSL' not in group_names"
@@ -10,16 +15,11 @@
 - ansible.builtin.include_tasks: "mlocate.yml"
   when: "'hosts_WSL' not in group_names"
 
-- ansible.builtin.include_tasks: "apt-removals.yml"
-
-- ansible.builtin.include_tasks: apt-misc-stuff.yml
-
-
 - ansible.builtin.include_tasks: "sshd.yml"
   when: "'hosts_WSL' not in group_names"
+
+- ansible.builtin.include_tasks: "sudoers.yml"
 
 - ansible.builtin.include_tasks: "ufw.yml"
   when: "'hosts_WSL' not in group_names"
 
-- ansible.builtin.include_tasks: "auditd.yml"
-  when: "'hosts_WSL' not in group_names"

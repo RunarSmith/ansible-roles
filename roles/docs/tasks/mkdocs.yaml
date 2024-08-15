@@ -1,0 +1,12 @@
+---
+
+- name: "docs > install packages"
+  become: true
+  apt:
+    name: 
+      - mkdocs
+      - mkdocs-material 
+      - mkdocs-material-extensions
+    state: "present"
+
+

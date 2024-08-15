@@ -1,2 +1,14 @@
 ---
 # tasks file for devops
+
+
+- name: "Installing Packages"
+  package:
+    name:
+      - kubernetes-client
+      - kubernetes-helm
+    state: latest
+  become: true
+
+
+
