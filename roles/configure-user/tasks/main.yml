@@ -7,6 +7,8 @@
 
 - ansible.builtin.include_tasks: "desktop-mate.yml"
 
+- ansible.builtin.include_tasks: "git.yml"
+
 - ansible.builtin.include_tasks: "ssh.yml"
 
 - ansible.builtin.include_tasks: "tmux.yml"

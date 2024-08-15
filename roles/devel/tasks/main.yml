@@ -10,3 +10,4 @@
     state: latest
   become: true
 
+- ansible.builtin.include_tasks: vscode.yaml

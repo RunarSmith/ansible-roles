@@ -12,3 +12,11 @@
     dest: "{{ ansible_env.HOME }}/.ssh/config"
     mode: '0440'
 
+- name: "Update user ssh config"
+  ansible.builtin.blockinfile:
+    path: "{{ ansible_env.HOME }}/.ssh/config"
+    insertafter : EOF
+    # append_newline: true  # added in ansible-core 2.16
+    # prepend_newline: true   # added in ansible-core 2.16
+    marker: "# -=-=- {mark} ANSIBLE MANAGED BLOCK -=-=-"
+    block: "{{ sshconfig_custom }}"
