@@ -17,3 +17,10 @@
   ansible.builtin.file:
     path: "{{ ansible_env.HOME }}/Documents/candies from strangers"
     state: absent
+
+- name: "Turn off the login banner in Linux or Unix .hushlogin file"
+  ansible.builtin.copy:
+    content: ""
+    dest: "{{ ansible_env.HOME }}/.hushlogin"
+    force: false
+    mode: 0444

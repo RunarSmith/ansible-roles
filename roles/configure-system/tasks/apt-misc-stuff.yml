@@ -4,14 +4,20 @@
   package:
     name:
       - jq
-      - pipx
-      - ntpdate
       - flameshot
       - exiftool
+
       - btop                # system monitor : https://github.com/aristocratos/btop
       
       - ranger # console file-manager
-      - rdate
+
+      - rdate   # date time fix
+      - ntpdate
+      
+      - python3
+      - virtualenv  # python
+      - pipx
+      
     state: latest
   become: true
 

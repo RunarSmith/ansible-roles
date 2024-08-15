@@ -6,8 +6,9 @@
   apt:
     name: 
       - codium
-      - vscodium
       - geany
+      - htop          # replaced by 'btop'
       - libreoffice
+      - vscodium
     state: "absent"
-
+    autoremove: true
