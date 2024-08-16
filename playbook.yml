@@ -15,8 +15,12 @@
 
     - blueteam-forensic
     - devel
+
     - devops
+    - devops-docker
+    
     - docs
+    - redteam-exegol
     - redteam-ad
     - redteam-customscripts
     - redteam-exploit
@@ -25,4 +29,5 @@
     - redteam-recon
     - redteam-web
 
-    
+
+    - virtualbox-guest
