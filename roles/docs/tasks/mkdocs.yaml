@@ -24,3 +24,10 @@
     - mkdocs-material-extensions
   become: true
 
+- name: append aliases
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/.bash_aliases"
+    line: "alias mkdocs='. {{ tools_root_path }}/mkdocs/bin/activate ; mkdocs'"
+    create: yes
+    state: present
+    insertafter: EOF
