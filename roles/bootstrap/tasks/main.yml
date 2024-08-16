@@ -10,7 +10,7 @@
 #    filtered_wsl_hosts: "{{ inventory_hostname }}"
 #  when: "'microsoft' in ansible_facts['kernel']"
 
-- name: Add WSL hosts to group
+- name: Add WSL hosts to specific group
   add_host:
     #name: "{{ item }}"
     name: "{{ inventory_hostname }}"

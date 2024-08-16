@@ -1,0 +1,7 @@
+---
+
+# path where resources (datas, or executables not aimed to be executed locally) are stored
+resources_root_path: /opt/resources
+
+# path where tools are stored
+tools_root_path: /opt/tools

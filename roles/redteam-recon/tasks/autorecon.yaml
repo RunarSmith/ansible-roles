@@ -4,7 +4,7 @@
 - name: "autorecon > checkout repository"
   ansible.builtin.git:
     repo: https://github.com/Tib3rius/AutoRecon.git
-    dest: /opt/autorecon/
+    dest: "{{ tools_root_path }}/autorecon/"
   become: true
 
 - name: get ferox buster
@@ -38,4 +38,4 @@
       - wkhtmltopdf
     state: "present"
 
-# TODO: alias autorecon='python3 /opt/autorecon/autorecon.py'
+# TODO: alias autorecon='python3 {{ tools_root_path }}/autorecon/autorecon.py'

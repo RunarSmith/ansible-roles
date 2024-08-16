@@ -1,2 +1,7 @@
 ansible_connection: local
 ansible_become_method: sudo
+
+# Explicitly specify the python interpreter to use, to avoid a warning :
+# > [WARNING]: Distribution debian 6.2 on host localhost should use /usr/bin/python, but is using /usr/bin/python3.11, since the discovered platform python interpreter was not present.
+# > See https://docs.ansible.com/ansible-core/2.14/reference_appendices/interpreter_discovery.html for more information.
+ansible_python_interpreter: /usr/bin/python3

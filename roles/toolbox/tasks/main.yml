@@ -1,4 +1,0 @@
----
-# tasks file for toolbox
-
-- ansible.builtin.include_tasks: github.yaml
