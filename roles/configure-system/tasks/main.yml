@@ -8,7 +8,7 @@
   loop:
     - "{{ resources_root_path }}"
     - "{{ tools_root_path }}"
-  become: yes
+  become: true
 
 
 - ansible.builtin.include_tasks: "apt.yml"

@@ -1,12 +1,26 @@
 ---
 
-- name: "docs > install packages"
+- name: "clean directories"
+  ansible.builtin.file:
+    path: "{{ tools_root_path }}/mkdocs"
+    state: absent
   become: true
-  apt:
-    name: 
-      - mkdocs
-      - mkdocs-material 
-      - mkdocs-material-extensions
-    state: "present"
 
+- name: "create directories"
+  ansible.builtin.file:
+    path: "{{ tools_root_path }}/mkdocs"
+    state: directory
+    mode: '0755'
+  become: true
+
+- name: "docs > install packages"
+  ansible.builtin.pip:
+    name: "{{ item }}"
+    state: latest
+    virtualenv: "{{ tools_root_path }}/mkdocs"
+  loop:
+    - mkdocs
+    - mkdocs-material 
+    - mkdocs-material-extensions
+  become: true
 

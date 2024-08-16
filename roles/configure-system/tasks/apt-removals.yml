@@ -10,5 +10,10 @@
       - htop          # replaced by 'btop'
       - libreoffice
       - vscodium
+      
+      - mkdocs        # obsolete packges versions
+      - mkdocs-material 
+      - mkdocs-material-extensions
+
     state: "absent"
     autoremove: true
