@@ -21,6 +21,7 @@
     
     - docs
     - redteam-exegol
+    - redteam-havoc
     - redteam-ad
     - redteam-customscripts
     - redteam-exploit
@@ -28,6 +29,5 @@
     - redteam-net
     - redteam-recon
     - redteam-web
-
 
     - virtualbox-guest

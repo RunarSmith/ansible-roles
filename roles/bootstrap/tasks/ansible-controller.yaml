@@ -8,6 +8,7 @@
   ansible.builtin.apt:
     name:
         - ansible
+        - git       # for git step
         - sshpass   # for sudo password
         - unzip     # for unarchive step
     state: present
