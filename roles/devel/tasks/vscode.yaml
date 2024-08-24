@@ -19,6 +19,8 @@
           - ms-python.python
           - ms-vscode.remote-explorer
           - yzhang.markdown-all-in-one
+          # Knoledge system in Markdown
+          - foam.foam-vscode
           # tools 
           #- GitHub.copilot
           - ms-vscode.hexeditor
