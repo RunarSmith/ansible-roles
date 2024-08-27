@@ -27,6 +27,8 @@
           - mhutchie.git-graph
           # DevSecOps
           - snyk-security.snyk-vulnerability-scanner
+          # Project manager (shortcuts to open folders/workspaces)
+          - alefragnani.project-manager
         visual_studio_code_settings_overwrite: true
         visual_studio_code_settings: {
           # UI 
