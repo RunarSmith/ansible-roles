@@ -25,6 +25,8 @@
           #- GitHub.copilot
           - ms-vscode.hexeditor
           - mhutchie.git-graph
+          - GitHub.remotehub
+          - github.vscode-github-actions
           # DevSecOps
           - snyk-security.snyk-vulnerability-scanner
           # Project manager (shortcuts to open folders/workspaces)
