@@ -6,6 +6,7 @@
 - ansible.builtin.include_tasks: "bash.yml"
 
 - ansible.builtin.include_tasks: "desktop-mate.yml"
+  when: "'hosts_WSL' not in group_names"
 
 - ansible.builtin.include_tasks: "git.yml"
 
