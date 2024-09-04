@@ -1,17 +1,4 @@
 ---
 
-- name: "[VirtualBox] Install guest addons packages"
-  become: true
-  ansible.builtin.apt:
-    name:
-      - virtualbox-guest-utils
-      - virtualbox-guest-x11
-    state: present
-
-- name: "[VirtualBox] Allow access to shared folders for user"
-  become: true
-  ansible.builtin.user:
-    name: "{{ ansible_user_id }}"
-    groups: vboxsf
-    append: yes
-
+- ansible.builtin.include_tasks: "vbox_guest.yaml"
+  when: "'hosts_WSL' not in group_names"

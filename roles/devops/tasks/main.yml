@@ -6,9 +6,8 @@
   package:
     name:
       - kubernetes-client
-      - kubernetes-helm
+      # - kubernetes-helm
     state: latest
   become: true
 
-
-
+- ansible.builtin.include_tasks: helm.yaml

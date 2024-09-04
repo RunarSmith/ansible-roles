@@ -8,6 +8,7 @@
   loop:
     - "{{ resources_root_path }}"
     - "{{ tools_root_path }}"
+    - /usr/local/bin/
   become: true
 
 

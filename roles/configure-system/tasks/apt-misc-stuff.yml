@@ -17,6 +17,8 @@
       - python3
       - virtualenv  # python
       - pipx
+
+      - curl
       
     state: latest
   become: true

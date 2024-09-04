@@ -20,7 +20,7 @@
     - devops-docker
     
     - docs
-    - redteam-exegol
+    #- redteam-exegol
     - redteam-havoc
     - redteam-ad
     - redteam-customscripts
