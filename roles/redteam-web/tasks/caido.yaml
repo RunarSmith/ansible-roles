@@ -12,7 +12,7 @@
 
 - name: Download Linux artifact
   ansible.builtin.get_url:
-    url:  "https://storage.googleapis.com/caido-releases/{{ caido_release.json.name }}/caido-desktop-{{ caido_release.json.name }}-linux-x86_64.deb"
+    url:  "https://caido.download/releases/{{ caido_release.json.name }}/caido-desktop-{{ caido_release.json.name }}-linux-x86_64.deb"
     dest: "/tmp/caido-desktop-{{ caido_release.json.name }}-linux-x86_64.deb"
 
 - name: "install caido"
