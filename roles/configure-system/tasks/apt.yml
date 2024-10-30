@@ -8,11 +8,3 @@
     cache_valid_time: 3600
     upgrade: full
   become: true
-
-- name: "apt > install system packages"
-  become: true
-  apt:
-    name: 
-      - glances
-    state: "present"
-
